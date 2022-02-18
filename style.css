@@ -1,0 +1,78 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	min-height: 100vh;
+
+	background-color: #000000;
+
+	display: grid;
+	place-items: center;
+}
+
+.frame {
+	width: 18rem;
+	height: 18rem;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	position: relative;
+
+	overflow: hidden;
+
+	/* background: #ffffff; */
+}
+
+.frame .rotate {
+	width: 30rem;
+	height: 15rem;
+
+	background: #00ff88;
+
+	position: absolute;
+
+	animation: rotates 3s ease-in-out infinite;
+}
+
+.frame .cant {
+	width: 284px;
+	height: 284px;
+
+	background: rgb(0, 0, 0);
+
+	z-index: 1;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.frame .cant .area {
+	width: 256px;
+	height: 256px;
+
+	z-index: 2;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	border: 1px solid #00ff88;
+}
+
+.frame .cant .area img {
+	filter: invert(1);
+	width: 6rem;
+}
+
+@keyframes rotates {
+	0% {
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
